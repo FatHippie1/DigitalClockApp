@@ -19,7 +19,7 @@ function displayTime() {
     }
 
     document.getElementById("clockHour").innerHTML = hour + ":" + minute + ":" + second + " " + amPm;
-    let t = setInterval(function () { displayTime(), 1000 });
+
 }
 
 function displayDate() {
@@ -31,6 +31,8 @@ function displayDate() {
 
     document.getElementById("clockDate").innerHTML = day[d.getDay()] + " " + month[d.getMonth()] + " " + date + ", " + year;
 }
+
+setInterval(function () { displayTime(), 1000 });
 
 displayTime();
 displayDate();
